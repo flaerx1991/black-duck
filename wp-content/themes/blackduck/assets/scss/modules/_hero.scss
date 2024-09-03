@@ -1,0 +1,221 @@
+.hero{
+    width: 100%;
+    background-color: $black-1;
+    background-image: url(../images/mobile-hero-pattern.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+                @include tablet{
+                    background-size: cover;
+                    
+                }
+               
+                @include desktop{
+                    background-size: contain;
+                }
+    .container{
+        .hero-content{
+            width: 100%;
+            
+            flex-wrap: wrap;
+            align-items: baseline;
+            padding-top: 57px;
+            justify-content: center;
+            padding-bottom: 30px;
+
+            @include tablet{
+                min-height: 800px;
+                padding-top: 145px;
+                align-items: center;
+                padding-bottom: 97px;
+                justify-content: unset;
+            }
+            @include desktop{
+                padding-top: 100px;
+            }
+            .text-col{
+                width:100%;
+                max-width: 287px;
+                background-image: url(../images/front-mobile-hero.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                min-height: 558px;
+                padding-top: 65px;
+                @include tablet{
+                    width: 60%;
+                    background-image: none;
+                    max-width: unset;
+                    min-height: unset;
+                    padding-top: unset;
+                }
+                .title{
+                    color:$white;
+                    margin-bottom: 17px;
+                    text-transform: uppercase;
+                    font-size: rem(40);
+                    text-align: center;
+                    line-height: rem(46);
+                    padding: 0 7px;
+                    letter-spacing: -1px;
+                    @include tablet{
+                        font-size: rem(48);
+                        line-height: rem(60);
+                        text-align: left;
+                        margin-bottom: 30px;
+                    }
+                    @include laptop{ 
+                        
+                    }
+                    @include desktop{
+                        font-size: rem(80); 
+                        line-height: rem(92);
+                    }
+                    @include full-width{
+                        font-size: rem(112); 
+                        line-height: rem(124);
+                    }
+                    font-weight: 300; 
+                    b{
+                        color:$orange-1;
+                        font-weight: 300;
+                    }
+                }
+                .description{
+                    font-size: rem(16);
+                    color:$white;
+                    line-height: 24px;
+                    padding: 0 27px;
+                    text-align: center;
+                    @include tablet{
+                        font-size: rem(24);
+                        margin-top: 30px;
+                        line-height: rem(30);
+                        max-width: 420px;
+                        text-align: left;
+                        padding: 0 7px;
+                    }
+                    @include laptop{
+                        
+                    }
+                    @include desktop{
+                        font-size: rem(20);
+                        line-height: rem(30);
+                        max-width: 651px;
+                    }
+                    @include full-width{
+                        font-size: rem(30);
+                        margin-top: 30px;
+                        line-height: rem(45);
+                    }
+
+                }
+                .buttons-block{
+                    margin: 30px 0;
+                    @include tablet{
+                        display: grid;
+                        width: 100%;
+                        column-gap: 26px;
+                        grid-template-columns: 1fr 1fr;
+                    }
+                    @include laptop{
+                        row-gap:20px;
+                        width: 80%;
+                    }
+                }
+                .big-button{
+                    background-color: $orange-1;
+                    padding: 10px 0px;
+                    max-width: 200px;
+                    margin: 45px auto;
+                    display: block;
+                    font-size: rem(24);
+                    color:$white-2;
+                    text-align: center;
+                    letter-spacing: 1px;
+                    @include tablet{
+                        margin: 32px auto;
+                        padding: 18.5px 0px;
+                        max-width: 256px;
+                        margin: 30px 0;
+                        padding: 18px 0px;
+                    }
+
+                    
+                }
+            }
+            .image-col{
+                width: 50%;
+                margin: 0 auto;
+                display: none;
+                @include tablet{
+                    width: 40%;
+                    text-align: right;
+                    margin: unset;
+                    position: relative; 
+                    display: block;
+                }
+                
+                .hero-image{
+                    width:80%;
+                    height: auto;
+                    position: relative;
+                    z-index: 2;
+                    @include laptop{
+                        width: unset;
+                        max-width: 300px;
+                    }
+                    @include desktop{
+                        width: 100%;
+                        max-width: unset;
+                        aspect-ratio: 1/1;
+
+                    }
+                    @include full-width{
+                        width: unset;
+                       
+                    }
+                }
+                .hero-image-back{
+                    width: 100%;
+                    height: auto;
+                    position: absolute;
+                    left: 31%;
+                    top: 61%;
+                    z-index: 1;
+                    transform: translate(-50%, -50%);
+                    
+                    @include laptop{
+                       
+                        left: 29%;
+                        top: 59%;
+                    }
+                    @include desktop{
+                        width: 100%;
+                        aspect-ratio: 1/1;
+                        left: 35%;
+                        top: 53%;
+                    }
+                    @include full-width{
+                        width: unset;
+                        aspect-ratio: 1/1;
+                        left: 45%;
+                        top: 58%;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+.hero-blue{
+
+    @include laptop{
+        background-image: url(https://blackduck.dev/wp-content/uploads/2023/09/hero-blue.svg);
+    }
+    
+} 
+.hero-black{
+    @include laptop{
+        background-image: url(../images/header-pattern.svg);
+        
+    }
+}               

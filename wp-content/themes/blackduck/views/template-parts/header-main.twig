@@ -1,0 +1,46 @@
+<header class="header-top fixed {{header.class ?? ''}}" >
+    <div class="header-top-inner">
+   
+    <div class="container flex space-between align-center">
+        <div class="logo-col flex align-center">
+            <a href="/" class="logo">
+                <img src="{{options.logo_image.url}}" width="4096" height="2304" alt="{{options.logo_image.alt}}">
+            </a>
+           
+        </div>
+        <div id="burger" class="burger-wrapper">
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="navigation  space-between align-center">
+            <div class="lang-block">
+                {% for lang in all_lang %}
+                {% if lang.code == current %}
+                   <p class="lang" id="current_lang">{{lang.tag}}</p>
+                 {% endif %}  
+                {% endfor %}
+                <div class="language-selector">
+                   {% for lang in all_lang %}
+                   {% if lang.code != current %}
+                   <a class="lang" href="{{lang.url}}">{{lang.tag}}</a>
+                   {% endif %} 
+                   {% endfor %}
+                   
+                </div>
+               
+               </div>
+            <nav class="menu">
+                {% for item in options.header_menu %}
+                <a href="{{item.menu_link.url}}" class="menu-item" >{{item.menu_link.title}}</a>
+                {% endfor %} 
+            </nav>
+           
+        </div>
+    </div>
+    </div>
+</header>

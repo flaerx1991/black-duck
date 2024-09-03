@@ -1,0 +1,136 @@
+.cta-form{
+    background-image: url(../images/cta-from-bg-mobile.svg),linear-gradient(180deg, #1B1B1B 0%, #000000 100%);
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position: center center;
+    padding: 30px 0px;
+    @include tablet{
+        padding: 64px 0px;
+        background-image: url(../images/cta-from-bg.svg),linear-gradient(180deg, #1B1B1B 0%, #000000 100%); 
+    }
+    .container{
+        .title {
+            font-family: 'Poppins',sans-serif;
+            color: $gray-1;
+            font-weight: 800;
+            font-size: rem(36);
+            line-height: rem(42);
+            text-align: center;
+            letter-spacing: 1px;
+            margin-bottom: 64px;
+            @include desktop{
+                font-size: rem(48);
+                line-height: rem(54);
+                margin-bottom: 30px;
+               
+            }
+            @include full-width{
+                font-size: rem(64);
+                line-height: rem(70);
+                margin-bottom: 45px;
+            }
+            b{ 
+                color:$orange-1;
+            }
+        }
+        .sending-form{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 712px;
+            margin: 0 auto;
+            form{
+                position: relative;
+            }
+            .blackduck-input{
+              background: linear-gradient(0deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.09));
+              padding: 21px 16px;
+              font-size: rem(18);
+              line-height: rem(27);
+              border: 1px solid #4B4B4B;
+              border-radius: 8px;
+              margin: 8.5px 0;
+              outline: none;
+              color: $gray-1;
+              width: 100%;
+              &:focus {
+                border-color:#D75228;
+                box-shadow: 0px 0px 16px 0px #D7522880;
+                color: #D75228;
+
+              }
+              @include laptop{
+                padding: 27px 40px;
+              }
+            }
+            label{
+                color:$gray-1;
+                font-size: rem(20);
+                margin: 10px 0;
+            }
+            .blackduck-select {
+                background: linear-gradient(0deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.09));
+                padding: 21px 16px;
+                font-size: rem(18);
+                line-height: rem(27);
+                border: 1px solid #4B4B4B;
+                border-radius: 8px;
+                margin: 8.5px 0;
+                outline: none;
+                color: $gray-1;
+                appearance: none;
+                width: 100%;
+                &:focus {
+                    border-color:#D75228;
+                    box-shadow: 0px 0px 16px 0px #D7522880;
+                    color: #D75228;
+    
+                  }
+                  @include laptop{
+                    padding: 27px 40px;
+                }
+            }
+            .blackduck-submit{
+                background-color: $orange-1;
+                padding: 10px 0px;
+                width: 100%;
+                border-radius: 8px;
+                max-width: 200px;
+                margin: 40px auto;
+                display: block;
+                font-size: rem(24);
+                color:$white-2;
+                text-align: center;
+                font-weight: 700;
+                font-family: 'Poppins',sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                @include tablet{
+                    padding: 18.5px 0px;
+                    max-width: 256px;
+                  
+                    padding: 18px 0px;
+                }
+                &:hover{
+                    cursor: pointer;
+                    box-shadow: 0 0 21px rgba(255, 255, 255 , 75%);
+                }
+                
+            }
+            .wpcf7-response-output{
+                position: absolute;
+                bottom: 21%;
+                left: 50%;
+                transform: translate(-50%, -55%);
+                width: max-content;
+                text-align: center;
+                color: #fff;
+                border-radius: 8px;
+            }
+                         
+
+
+
+        }
+    }
+}

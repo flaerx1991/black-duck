@@ -1,0 +1,28 @@
+{% extends "main.twig" %}
+
+{% block content %}
+    <div class="blog-content">
+        <div class="container">
+            <div class="heading-block">
+                <h1 class="page-heading">Blog</h1>
+            </div>
+            {% if posts|length > 0 %}
+            <div class="posts">
+                {% for post in posts %}
+                <div class="col">
+                    <a href="{{post.link}}" class="post-link">
+                        <img class="news-image" src="{{post.thumbnail.src}}" alt="{{ post.title }} " width="4096" height="2304">
+                        <p class="post-title">{{ post.title }}</p>
+                        <p class="post-preview"> {{ post.content|slice(0, 150) }}... </p>
+                        <a href="{{post.link}}" class="readmore-link">Read more</a>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <div>Nothing found</div>
+            {% endif %}
+        </div>
+        
+    </div> 
+{% endblock %}

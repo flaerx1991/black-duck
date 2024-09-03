@@ -1,0 +1,15 @@
+<section class="faq">
+    <div class="container">
+        <p class="title">{{module.title}}</p>
+        <div class="accordion-set">
+            {% for accitem in module.accordion %}
+            <div class="accordion">
+                <a class="toggle" href="#" aria-label="Sample toggle item #1">{{accitem.question}} </a>
+                <div class="toggle-contents">
+                    {{accitem.answer}}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,120 @@
+.list{
+    background-image: url(../images/faq-bg.svg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 60px 0;
+    @include laptop{
+        padding: 150px 0;
+    }
+    .container{
+        .title{
+            font-family: 'Poppins',sans-serif;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: rem(32);
+            line-height: rem(38);
+            letter-spacing: 1px;
+            color:$gray-1;
+            font-weight: 800;
+            @include laptop {
+               
+            }
+            @include desktop{
+                margin-bottom: 50px;
+                font-size: rem(48); 
+                line-height: rem(54);
+                
+            } 
+            @include full-width{
+                margin-bottom: 32px;
+                font-size: rem(64);
+                line-height: rem(70);
+            }
+            b{
+                color:$orange-1;
+            }
+        }
+        .description{ 
+            
+            max-width: 1093px;
+            margin: 0 auto;
+            p{
+                color:$gray-1;
+                font-weight: 400;
+                text-align: center;
+                margin-bottom: 20px;
+                @include tablet{
+                margin-bottom: 62px;
+                }
+                @include laptop{
+                font-size: rem(20);
+                line-height: rem(30);
+                }
+                @include desktop{
+                margin-bottom: 31px;
+                font-size: rem(20);
+                line-height: rem(30);
+
+                }
+                @include full-width{
+                margin-bottom: 132px;
+                font-size: rem(40);
+                line-height: rem(60);
+                margin-bottom: 100px;
+                }
+            }
+            
+        }
+        .items-list{
+            display: grid;
+            grid-template-columns: 1fr;
+            max-width: 1263px;
+            margin: 0 auto;
+            row-gap: 10px;
+            column-gap: 20px;
+            @include tablet {
+                row-gap: 20px;
+                grid-template-columns: 1fr 1fr;
+            }
+            .list-item{
+                color: $gray-1;
+                display: flex;
+                align-items: baseline; 
+                font-size: rem(16);
+                line-height: rem(20);
+                position: relative;
+                padding-left: 18px;
+                @include tablet{
+                    font-size: rem(20);
+                    line-height: rem(30);
+                }
+                @include full-width {
+                    font-size: rem(30);
+                    line-height: rem(40);
+                    padding-left: 5px;
+                }
+                &:before {
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    background-color: $orange-1;
+                    display: block;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    position: absolute;
+                    left: 1px;
+                    top: 4px;
+                    @include tablet {
+                        top: 16%;
+                    }
+                    @include full-width{
+                        position: absolute;
+                        left: -20px;
+                        top: 17%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,150 @@
+.faq{
+    
+    width: 100%;
+    padding: 36px 20px;
+    background-image: url(../images/faq-bg.svg),linear-gradient(180deg, #0E0E0E 0%, #1A110E 100%);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include desktop{
+        padding: 101px 0px 192px;
+    }
+    .container{
+        padding: 0;
+        .title {
+            font-family: 'Poppins',sans-serif;
+            color: $gray-1;
+            font-weight: 800;
+            font-size: rem(36);
+            line-height: rem(42);
+            text-align: center;
+            letter-spacing: 1px;
+            margin-bottom: 64px;
+            @include desktop{
+                font-size: rem(48);
+                line-height: rem(54);
+                margin-bottom: 30px;
+               
+            }
+            @include full-width{
+                font-size: rem(64);
+                line-height: rem(70);
+                margin-bottom: 45px;
+            }
+            b{
+                color:$orange-1;
+            }
+        }
+        .accordion-set{
+            max-width: 750px;
+            margin: 0 auto;
+            border-radius: 8px;
+            border: 1px solid #282828;
+            .accordion{
+                border-bottom: 1px solid #282828;
+                padding: 20px 0 20px 20px;
+                background-color: #1A1A1AED;
+                @include tablet{
+                    padding: 20px 0 20px 34px;
+                }
+                .toggle{
+                    display: block;
+                    position: relative; 
+                    color: $orange-1;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    font-weight: 600;
+                    padding-right: 20px;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        transform-origin: top;
+                        transition: 0.2s transform, 0.2s -webkit-transform;
+                        top: 50%;
+                        right: 8px;
+                        transform: rotateZ(90deg) translateY(-50%);
+                        width: 22px;
+                        height: 1px;
+                        background-color: #fff;
+                        @include tablet{
+                            right: 36px;   
+                        } 
+                    }
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        transform-origin: top;
+                        transition: 0.2s transform, 0.2s -webkit-transform;
+                        top: 50%;
+                        right: 8px;
+                        transform: rotateZ(0deg) translateY(-50%);
+                        width: 22px;
+                        height: 1px;
+                        background-color: #fff;
+                        @include tablet{
+                            right: 36px; 
+                        }
+                    }
+                    @include laptop{
+                        font-size: rem(24);
+                        line-height: rem(36);
+                        padding: 20px 0px;
+                    }
+        
+                }
+                .toggle-contents{
+                    margin-top:20px;
+                    display: none;
+                    p{ 
+                        font-size: rem(16);
+                        color: $gray-1;
+                        @include tablet{
+                            font-size: rem(20);
+                            line-height: rem(30); 
+                        }
+                    }
+                    .content {
+                        grid-template-columns: 1fr 1fr 1fr;
+                        column-gap: 20px;
+                        .acc-col{
+                            text-align: center;
+                            font-weight: 600;
+                            .os-system{
+                                border-bottom:2px solid #7c7c7c;
+                                margin-bottom: 10px;
+                                padding-bottom: 10px;
+                            }
+                        }
+                        .mactrix{
+                            .os-system{
+                                color:$green-1;
+                                border-color: $green-1;
+                            }
+                            .param{
+                                color:$green-1;  
+                            }
+                        }
+                    }
+                }
+                &:last-of-type{
+                    border: none;
+                } 
+            }
+            .active{
+                .toggle-contents{
+                    display: block;
+                }
+                .toggle{
+                    &:before{
+                        transform: rotateZ(0deg) translateY(-50%);
+                        
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+}
+ 
+

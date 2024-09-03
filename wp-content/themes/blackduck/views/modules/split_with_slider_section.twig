@@ -1,0 +1,39 @@
+<section class="split-with-slider">
+    <div class="container-full">
+        <div class="main-content">
+            <div class="slider-col-wrap">
+                <div class="slider-col-content">
+                    <div class="swiper slider-content">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper swiper-slides">
+                            <!-- Slides -->
+                            {% for slide in module.slides %}
+                            <div class="slider-item swiper-slide">
+                                <h4>{{slide.slide_title}}</h4>
+                                <p>{{slide.slide_description}}</p>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="cta-col">
+                <div class="cta-content-col">
+                    <h4>{{module.title}}
+                    </h4>
+                    <p> {{module.description}}</p>
+    
+                    <a href="{{module.action_button.url}}"> {{module.action_button.title }}</a>
+                </div>
+                <div class="back-image">
+            <img src="https://svgshare.com/i/x1i.svg" alt="">
+        </div>
+            </div>
+        </div>
+        
+    </div>
+</section>

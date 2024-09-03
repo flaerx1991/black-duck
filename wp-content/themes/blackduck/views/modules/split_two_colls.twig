@@ -1,0 +1,22 @@
+<section class="split-two-cols">
+    <div class="container-full   orange-two-cols">
+        <div class="content flex right-al ">
+            <div class="image-col">
+                
+                <p class="title left-title">{{module.left_title}}</p>
+                <p class="description left-description">{{module.left_description}}</p>
+                {% if module.action_left_button %}
+                <a href="{{module.action_left_button.url}}" class="action-button">{{module.action_left_button.title}}</a>
+                {% endif %}
+            </div>
+            <div class="text-col">
+                <img src="{{module.column_image.url}}" alt="">
+                <p class="title right-title">{{module.title}}</p>
+                <p class="description right-description">{{module.description}}</p>
+                {% if module.action_button %}
+                <a href="{{module.action_button.url}}" class="action-button right-action-button">{{module.action_button.title}}</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

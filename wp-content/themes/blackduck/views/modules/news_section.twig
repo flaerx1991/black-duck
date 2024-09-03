@@ -1,0 +1,23 @@
+<section  id="news" class="news {{module.bg_style}}">
+    <div class="container">
+        <p class="title">{{module.title}}</p>
+        <p class="description">{{module.description }}</p>
+        <div class="news-container grid">
+            {% for post in module.news_posts %}
+            <div class="news-col">
+                <a href="{{post.link}}" class="post-link">
+                    <img class="news-image" src="{{post.thumbnail.src}}" alt="{{ post.title }} " width="4096" height="2304">
+                    <p class="post-title">{{ post.title }}</p>
+                    <p class="post-preview"> {{ post.content|slice(0, 80) }}... </p>
+                    <a href="{{post.link}}" class="readmore-link">{{module.read_more_title}}</a>
+                </a>
+                
+
+            </div>
+            {% endfor %} 
+            
+        </div>
+       <a href="{{module.action_button.url}}" class="action-button">{{module.action_button.title}}</a>
+       
+    </div>
+</section>

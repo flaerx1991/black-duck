@@ -1,0 +1,166 @@
+.news{
+    background-image: url(../images/news-bg-black.svg);
+    padding: 60px 0;
+   
+    background-size: cover;
+    .container{
+       
+        .title{
+            font-family: 'Poppins',sans-serif;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: rem(32);
+            line-height: rem(38);
+            letter-spacing: 1px;
+            color:$gray-1;
+            font-weight: 800;
+            @include laptop {
+               
+            }
+            @include desktop{
+                margin-bottom: 15px;
+                font-size: rem(48);
+                line-height: rem(54);
+                
+            }
+            @include full-width{
+                margin-bottom: 32px;
+                font-size: rem(64);
+                line-height: rem(70);
+            }
+            b{
+                color: $orange-1;
+            }
+        } 
+        .description{
+            color:$gray-1;
+            text-align: center;
+            @include tablet{
+                margin-bottom: 62px;
+            }
+            @include laptop{
+                font-size: rem(32);
+                line-height: rem(40);
+            }
+            @include desktop{
+                margin-bottom: 31px;
+                
+            }
+            @include full-width{
+                margin-bottom: 132px;
+                font-size: rem(40);
+                line-height: rem(60);
+                margin-bottom: 100px;
+            }
+        }
+        .news-container{
+            grid-template-columns: 1fr;
+            column-gap: 25px;
+            row-gap: 45px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            max-width: 1435px;
+            @include tablet {
+                grid-template-columns: repeat(2,1fr);
+            }
+            @include laptop {
+                grid-template-columns: repeat(4,1fr);
+            }
+            .news-col{
+                @include laptop{
+                    transition: 0.3s;
+                    padding-bottom: 10px;
+                }
+               
+                p{
+                    font-size: rem(18);
+                    color:#F2F2F2CC;
+                    line-height: rem(27);
+                    @include laptop{
+                        padding: 0 10px;
+                    }
+                }
+                .post-link{
+                    .news-image{
+                        width:100%;
+                        height: auto;
+                        aspect-ratio: 1/1;
+                        object-fit: cover;
+                        max-height: 200px;
+                    }
+                    .post-title{
+                        margin: 18px 0px 16px;
+                        font-size: rem(20);
+                        font-weight: 500;
+                        color:$gray-1;
+                        @include laptop{
+                            padding: 0 10px;
+                        }
+                       
+                    }
+                }
+                .readmore-link{
+                    color:$orange-1;
+                    font-size: rem(20);
+                    margin-top: 14px;
+                    line-height: rem(30); 
+                    @include laptop{
+                        padding: 0 10px;
+                    }
+                }
+                @include laptop{
+                    &:hover {
+                        box-shadow: 0px 0px 10px 0px #D752286B;
+                        background-color:#FFFFFF08;
+                    }
+                }
+                
+            }
+            
+        }
+        .action-button {
+            text-decoration: none;
+            text-transform: uppercase;
+            max-width: 247px;
+            width: 100%;
+            padding: 0 26px;
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 38px;
+            text-align: center;
+            height: 64px;
+            background-color: $orange-1;
+            color: $white;
+            border-radius: 8px;
+            transition: .3s;
+            margin: 0 auto;
+            letter-spacing: 1px;
+            @include laptop {
+                max-width: 265px;
+                margin-top: 60px;
+                height: 72px;
+            }
+            &:hover{
+                cursor: pointer;
+                box-shadow: 0 0 21px rgba(255, 255, 255 , 75%);
+            }
+        }
+
+    }
+}
+.orange-bg{
+    background: linear-gradient(180deg, #D75228 0%, #000000 100%);
+    .container{
+        .title{
+            b{
+                color: $black-1;
+            }
+        }
+    }
+}
+.black-bg {
+    background-color: $black-1;
+}

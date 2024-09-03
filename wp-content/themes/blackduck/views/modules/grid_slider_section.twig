@@ -1,0 +1,40 @@
+<section class="grid-slider">
+    <div class="container-full">
+        <div class="content">
+            <p class="title">{{module.title}}</p>
+            <p class="description">{{module.description}}</p>
+            <div class="items grid">
+                {% for item in module.grid_items %}
+                <div class="item-grid">
+                    <div class="front-side">
+                        <img src="{{item.item_icon.url}}" alt="{{item.item_icon.title}}">
+                        <p class="item-title">{{item.title}}</p>
+                    </div>
+                    <div class="back-side">
+                        <p class="item-title">{{item.description}}</p>
+                    </div>
+                    
+                </div>
+                {% endfor %}
+            </div>
+            <div class="swiper slider-content2">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper swiper-slides">
+                    <!-- Slides -->
+                    {% for slide in module.grid_items %}
+                    <div class="slider-item swiper-slide">
+                        <div class="slide-upper">
+                            <img src="{{slide.item_icon.url}}" alt="{{slide.item_icon.title}}">
+                            <p>{{slide.title}}</p>
+                        </div>
+                       
+                        <p class="slide-description">{{slide.description}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination2"></div>
+            </div>
+        </div>
+    </div>
+</section>

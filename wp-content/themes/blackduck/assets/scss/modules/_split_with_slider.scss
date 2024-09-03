@@ -1,0 +1,287 @@
+
+$white: #ffffff;
+$white2: #d9d9d9;
+
+$mediaTabletMax: 1024px;
+.split-with-slider{
+    .container-full {
+        width: 100%;
+        padding: 0;
+        background: black;
+        position: relative;
+        @include laptop {
+            height: 610px;
+            // padding: 207px 0
+        }
+        @include full-width{
+            height: 1080px;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: relative;
+            z-index: 2;
+            @include laptop {
+                flex-direction: row;
+            }
+            .slider-col-wrap {
+                // background: red;
+                background: linear-gradient(
+                        180deg,
+                        rgba(215, 82, 40, 0.4) 0%,
+                        rgba(215, 82, 40, 0) 100%
+                    )
+                    black;
+                padding: 0 16px;
+                padding-bottom: 36px;
+        padding-top: 156px;
+                @include laptop {
+                    width: 54%;
+                    padding: 0;
+                    clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%);
+                    padding-right: 8%;
+                    padding-left: 96px;
+                    filter: drop-shadow(10px 4px 4px rgba(0, 0, 0, 0.25));
+                }
+    
+                .slider-col-content {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    .slider-content {
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        z-index: 2;
+                        row-gap: 40px; 
+                        overflow: hidden;
+                        @include tablet {
+                            row-gap: 110px;
+                        }
+                        // @include laptop {}
+                        // width: 100%;
+                        // height: 100%;
+                        .swiper-slides {
+                            .slider-item {
+                                h4 {
+                                    font-size: 40px;
+                                    font-weight: 800;
+                                    color: $white;
+                                    letter-spacing: -0.96px;
+                                    line-height: 52px;
+                                    margin-bottom: 77px;
+                                    @include laptop {
+                                        font-size: 32px;
+                                        margin-bottom: 40px;
+                                    }
+                                    @include full-width{
+                                        font-size: 48px;
+                                        margin-bottom: 94px;
+                                    }
+                                    span {
+                                        color:$orange-1;
+                                    }
+                                }
+    
+                                p {
+                                    font-size: 16px;
+                                    line-height: 30px;
+                                    font-weight: 400;
+                                    color: $white;
+                                    @include laptop {
+                                        font-size: 20px;
+                                    }
+                                    @include full-width {
+                                        font-size: 24px;
+                                    }
+                                }
+                            }
+                        }
+    
+                        .swiper-pagination {
+                            display: flex;
+                            position: relative;
+                            margin: 0 auto;
+                            width: unset;
+                            // margin-top: 110px;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            // justify-content: center;
+                            
+                            @include laptop {
+                                margin: 0;
+                                justify-content: unset;
+                            }
+                            .swiper-pagination-bullet {
+                                position: relative;
+                                opacity: unset;
+                                width: 16px;
+                                height: 16px;
+                                border-radius: 8px;
+                                background: $white2;
+                                display: block;
+                                transition: 0.3s all;
+                                margin: 0 8px;
+                                 box-sizing: unset;
+                            }
+    
+                            .swiper-pagination-bullet-active {
+                                background: $orange-1;
+                                width: 108px;
+                                // border-radius: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .cta-col {
+                // background: blue;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                background: linear-gradient(180deg, #2D2D2D 0%, #151515 100%);
+                padding: 0 16px;
+                padding-top: 76px;
+                padding-bottom: 39px;
+                overflow: hidden;
+                @include tablet{
+                    background-image: url(https://blackduck.dev/wp-content/uploads/2023/09/12.svg);
+                    
+                    background-position: 51px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+                @include laptop {
+                    background-position: -139px;
+                    padding: 0;
+                    overflow: unset;
+                    width: 46%;
+                   
+                    padding-right: 90px;
+                }
+                .cta-content-col {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+                    z-index: 2;
+                    h4 {
+                        font-size: 36px;
+                        font-weight: 800;
+                        color: $white;
+                        line-height: 42px;
+                        letter-spacing: -0.96px;
+                        text-align: center;
+                        margin-bottom: 96px;
+                        // padding: 0 30px;
+                        @include laptop {
+                            font-size: 32px;
+                            line-height: 40px;
+                            padding: 0px 6px;
+                            margin-bottom: 53px;
+    
+                        }
+                        @include full-width{
+                            font-size: 48px;
+                            line-height: 52px;
+                            padding: 0 70px;
+                            margin-bottom: 86px;
+                        }
+                        span {
+                            color: $orange-1;
+                            text-decoration: underline;
+                        }
+                    }
+    
+                    p {
+                        font-size: 20px;
+                        font-weight: 400;
+                        line-height: 32px;
+                        color: $white;
+                        text-align: left;
+                       
+                        @include laptop {
+                            font-size: 20px;
+                            text-align: center;
+                            line-height: 30px;
+    
+                        }
+                        @include full-width{
+                            font-size: 24px;
+                            text-align: center;
+                            line-height: 30px;
+                        }
+                    }
+    
+                    a {
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        max-width: 247px;
+                        width: 100%;
+                        padding: 0 26px;
+                        font-size: 24px;
+                        font-weight: 700;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        margin-top: 38px;
+                        height: 64px;
+                        background-color: $orange-1;
+                        color: $white;
+                        border-radius: 8px;
+                        transition: .3s;
+                        letter-spacing: 1px;
+                        @include laptop {
+                            max-width: 265px;
+                            margin-top: 60px;
+                            height: 72px;
+                        }
+                        &:hover{
+
+                            box-shadow: 0 0 21px rgba(255, 255, 255 , 75%);
+                        }
+                    }
+                }
+                .back-image {
+                    position: absolute;
+                    z-index: 1;
+                    top: -11px;
+                    left: 50%;
+                    transform: translate(-63%, 0px);
+                    @include tablet {
+                        display: none;
+                        z-index: -1;
+                        top: 0;
+                        left: unset;
+                        right: 0;
+                        transform: translate(-17%, 0px);				
+                        }
+                    @include full-width {
+                        transform: translate(0px, 0px);
+                    }    
+                    img{
+                            width: 432px;
+                        @include laptop {
+                            width: 700px;
+                            
+                        }
+                        @include full-width {
+                            width: unset;
+                            
+                        }	
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+}

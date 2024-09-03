@@ -1,0 +1,150 @@
+footer{
+    background: $black-1;
+    padding: 45px 0;
+    font-size: 16px;
+    color: $gray-1;
+
+    .container-full{
+        .upper-footer{
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            @include tablet{
+                align-items: unset;
+                max-width: 1700px;
+                margin: 0 auto;
+                padding: 0 31px;
+            }
+            .col{
+                width: 50%;
+                margin-top: 20px;
+                @include tablet{
+                    width: unset;
+                    margin-top: unset;
+                    
+                }
+                &:last-of-type{
+                    width: 100%;
+                    @include tablet{
+                        width: unset;
+                    }
+                }
+            }
+            .payment{
+                .payments{
+                    @include laptop{
+                        display: flex;
+                    }
+                    .payment-image{
+                        width: 100%;
+                        max-width: 30px;
+                        height: auto;
+                        margin-right: 8px;
+                    }
+                }
+            } 
+            .logo{
+                .footer-logo{
+                    width: 100%;
+                    max-width: 110px;
+                    height: auto;
+                }
+            }
+            .footer-menu{
+                .menu{
+                    .menu-item{
+                        
+                        padding: 3px 0;
+                        font-weight: 600;
+                        a{
+                            color: $gray-1;
+                            &:hover{
+                                text-decoration: underline;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .delivery{  
+                .delivery-icons{
+                    display: flex;
+                    
+                    gap: 10px;
+                    align-items: center;
+                } 
+                .delivery-image{
+                    width: 100%;
+                    max-width: 38px;
+                    height: auto; 
+                }
+            }
+            .social{
+                width: 100%;
+
+                justify-content: center;
+                .socials{
+                    justify-content: left;
+                    @include tablet{
+                        justify-content: center;
+                    }
+                   
+                }
+                .social-item{
+                    padding: 4px;
+                    img{
+                        width: 100%;
+                        max-width: 35px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+        .bottom-footer{
+            display: block;
+            margin-top: 30px;
+            padding-top: 20px;
+            text-align: center;
+            .partners{
+                text-align: center;
+                @include tablet{
+                    text-align: left;
+                }
+                
+            }
+            .privacy{
+                color:$gray-1;
+            }
+        } 
+    }
+    .arrow-back{
+        position: fixed;
+        right: 62px;
+        bottom: 41px;
+        display: none;
+        width: 48px;
+        height: 89px;
+        background-image: url(../images/arrow-up-1--arrow-up-keyboard.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 999;
+        animation: bounce2 2s ease infinite;
+        &:hover{
+            cursor: pointer;
+            filter: invert(73%) sepia(9%) saturate(6987%) hue-rotate(330deg) brightness(107%) contrast(101%);
+        }
+    }
+    @keyframes bounce2 {
+        0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+        40% {transform: translateY(-30px);}
+        60% {transform: translateY(-15px);}
+    }
+    .visible{
+        @include laptop{
+            display: block;  
+            
+        }
+        
+    }
+} 

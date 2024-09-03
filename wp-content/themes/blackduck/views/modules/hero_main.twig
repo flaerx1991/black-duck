@@ -1,0 +1,20 @@
+<section id="hero" class="hero {{module.background_style}} ">
+    <div class="container">
+        <div class="hero-content flex ">
+            <div class="text-col">
+                <h1 class="title">
+                    {{ module.title }}
+                </h1>
+                <p class="description">{{ module.description }}</p>
+                <a href="{{ module.link.url }}" class="btn big-button" >{{ module.link.title }}</a>
+                {# <img src="{{ module.mobile_image.url }}" alt="" class="mobile-text-phone"> #}
+            </div>
+            <div class="image-col">
+                <img src="{{ module.image.url }}" alt="{{ module.title }}" width="4096" height="2304" class="hero-image">
+                <img src="{{ module.back_image.url }}" alt="{{ module.title }}" width="4096" height="2304" class="hero-image-back">
+            </div>
+            
+        </div>
+    </div>
+</section>
+

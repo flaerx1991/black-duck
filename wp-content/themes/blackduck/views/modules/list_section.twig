@@ -1,0 +1,13 @@
+<section class="list">
+    <div class="container">
+        <div class="title">
+            {{module.title}}
+        </div>
+        <div class="description">{{module.description}}</div>
+        <div class="items-list">
+            {% for item in module.items_list %}
+                <p class="list-item">{{item.title}}</p>
+            {% endfor %}
+        </div>
+    </div>
+</section>

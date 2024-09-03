@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    
+}
+html{
+    font-size: 100%;
+    scroll-behavior: smooth;
+    
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    height: 100%;
+    background-color: $black-1;
+  
+}
+main{
+    width:100%;
+}
+.container{
+    width:100%;
+
+    padding: 0 20px;
+    margin: 0 auto;
+    @include phone-lg {
+        max-width: $phone-lg;
+    }
+    @include tablet{
+        max-width: $tablet;
+    }
+    @include laptop{
+        max-width: $laptop;
+    }
+    @include desktop{
+        max-width: 1700px; 
+    }
+}
+.container-full {
+    width: 100%;
+    padding: 0 20px;
+}
+.title { 
+    font-family: 'Anton', sans-serif;
+    font-size: rem(26);
+    @include tablet {
+        font-size: rem(36);
+    }
+    @include laptop { 
+        font-size: rem(34.8);
+    }
+     
+}
+.description{
+     font-size: rem(16);
+     @include tablet {
+        font-size: rem(20);    
+     }
+    
+}
+.btn {
+    text-transform: uppercase;
+    border-radius: rem(8);
+    
+    font-weight: 500;
+    transition: .3s;
+    &:hover{
+
+        box-shadow: 0 0 21px rgba(255, 255, 255 , 75%);
+    }
+}
+.sub-title{
+    font-weight: 600;
+    font-size: rem(28);
+    @include tablet {
+        font-size: rem(24);
+    }
+    @include laptop {
+        font-size: rem(28);
+    }
+}

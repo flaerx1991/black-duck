@@ -1,0 +1,24 @@
+{% extends 'main.twig' %}
+
+{% block content %}
+    <div class="post-content">
+        <div class="container">
+            <div class="heading-block">
+                <h1 class="post-heading">{{ post.title }}</h1>
+               
+            </div>
+            <div class="post-image">
+                <img src="{{post.thumbnail.src}}" alt="{{ post.title }} " width="4096" height="2304">
+            </div>
+            <div class="post-content-block">
+                {{ post.content }}
+            </div>
+            {# <div class="post-meta">
+                <div>Written by {{post.author}}   <time>{{ post.date('F j,Y') }}</time></div>
+            </div> #}
+        </div> 
+        
+      
+       
+    </div>
+{% endblock %}

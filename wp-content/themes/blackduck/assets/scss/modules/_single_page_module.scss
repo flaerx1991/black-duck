@@ -1,0 +1,68 @@
+.single-page-module{
+    padding: 200px 0;
+    width: 100%;
+    background-color: #FFF;
+    .container{
+        .heading-block{
+           
+            margin-bottom: 34px;
+            padding-bottom: 10px;
+            .page-heading{
+                text-align: center;
+                font-size: rem(36);
+                @include tablet{
+                    font-size: rem(36);
+                }
+                @include full-width {
+                    font-size: rem(48);
+                    line-height: rem(52);
+                }
+            } 
+            
+        }
+        .page-content{
+            max-width: 960px;
+            margin: 0 auto;
+                p{ 
+                    font-size: rem(18);
+                    margin-bottom: 30px;
+
+                } 
+                .links-404{
+                    margin-bottom: 135px;
+                    text-align: center;
+                    .go-home {
+                        color: $green-1;
+                        text-decoration: underline;
+                    }
+                }
+                .wpcf7-form p:first-of-type{
+                    display: block;
+                    
+                }
+                .wpcf7-form{
+                    input{
+                        border: 1px solid #efefef;
+                        width: 200px;
+                        background-color: #efefef;
+                        padding: 10px;
+                        margin-bottom: 20px;
+                    } 
+                    select{
+                        border: 1px solid #efefef;
+                        width: 200px;
+                        background-color: #efefef;
+                        padding: 10px; 
+                    }
+                    .wpcf7-submit {
+                        display: block;
+                        font-size: 1rem;
+                        background-image: linear-gradient(to right, #18d656 0%, #28e882 100%);
+                        line-height: 36px;
+                        padding: 0 24px;
+                        text-transform: uppercase; 
+                    }
+                }
+        }
+    }
+}
